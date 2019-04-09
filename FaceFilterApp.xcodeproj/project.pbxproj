@@ -12,6 +12,8 @@
 		C128FA692259037B0008BCDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C128FA672259037B0008BCDF /* Main.storyboard */; };
 		C128FA6B2259037D0008BCDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C128FA6A2259037D0008BCDF /* Assets.xcassets */; };
 		C128FA6E2259037D0008BCDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C128FA6C2259037D0008BCDF /* LaunchScreen.storyboard */; };
+		C1FE9A6D225D3065000AAF25 /* FilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE9A6C225D3065000AAF25 /* FilterNode.swift */; };
+		C1FE9A6F225D306E000AAF25 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE9A6E225D306E000AAF25 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		C128FA6A2259037D0008BCDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C128FA6D2259037D0008BCDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C128FA6F2259037D0008BCDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1FE9A6C225D3065000AAF25 /* FilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterNode.swift; sourceTree = "<group>"; };
+		C1FE9A6E225D306E000AAF25 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				C128FA672259037B0008BCDF /* Main.storyboard */,
 				C128FA6A2259037D0008BCDF /* Assets.xcassets */,
 				C128FA6C2259037D0008BCDF /* LaunchScreen.storyboard */,
+				C1FE9A6C225D3065000AAF25 /* FilterNode.swift */,
+				C1FE9A6E225D306E000AAF25 /* StringExtension.swift */,
 				C128FA6F2259037D0008BCDF /* Info.plist */,
 			);
 			path = FaceFilterApp;
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1FE9A6F225D306E000AAF25 /* StringExtension.swift in Sources */,
+				C1FE9A6D225D3065000AAF25 /* FilterNode.swift in Sources */,
 				C128FA662259037B0008BCDF /* ViewController.swift in Sources */,
 				C128FA642259037B0008BCDF /* AppDelegate.swift in Sources */,
 			);
