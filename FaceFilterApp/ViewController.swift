@@ -12,12 +12,22 @@ import ARKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var sceneView: ARSCNView!
-    let noseOptions = ["👃", "🐽", "💧", " "]
-    let eyeOptions = ["👁", "🌕", "🌟", "🔥", "⚽️", "🔎", " "]
-    let mouthOptions = ["👄", "👅", "❤️", " "]
-    let hatOptions = ["🎓", "🎩", "🧢", "⛑", "👒", " "]
+    let noseOptions = ["nose1","nose4","nose5"]
+    let eyeOptions = ["eye1","eye2","eye4"]
+    let mouthOptions = ["mouth1", "mustache","mouth4"]
+    let hatOptions = ["hat2", "hat1", "head1", "hat3", "head2","head4","head5","head7","head9"]
     let features = ["nose", "leftEye", "rightEye", "mouth", "hat"]
-    let featureIndices = [[9], [1064], [42], [24, 25], [20]]
+    let featureIndices = [[8], [1064], [42], [24, 25], [20]]
+
+    @IBAction func saveScreenhot(){
+        
+        //1. Create A Snapshot
+        let snapShot = self.sceneView.snapshot()
+        
+        //2. Save It The Photos Album
+        UIImageWriteToSavedPhotosAlbum(snapShot, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +46,33 @@ class ViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
+    }
+    
+//     func touchesBegan(_ touches: UITapGestureRecognizer, with event: UIEvent?) {
+//        let location = touches.location(in: sceneView)
+//                let results = sceneView.hitTest(location, options: nil)
+//                if let result = results.first,
+//                    let node = result.node as? FilterNode {
+//                    node.next()
+//                }
+//    }
+    
+    @IBAction func handleTap(_ sender: UITapGestureRecognizer) {
+        let location = sender.location(in: sceneView)
+        let results = sceneView.hitTest(location, options: nil)
+        if let result = results.first,
+            let node = result.node as? FilterNode {
+            node.next()
+        }
+    }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        
+        if let error = error {
+            print("Error Saving ARKit Scene \(error)")
+        } else {
+            print("ARKit Scene Successfully Saved")
+        }
     }
     
     func updateFeatures(for node: SCNNode, using anchor: ARFaceAnchor) {
@@ -65,7 +102,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
 }
 extension ViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
@@ -82,6 +118,8 @@ extension ViewController: ARSCNViewDelegate {
         let noseNode = FilterNode(with: noseOptions)
         noseNode.name = "nose"
         node.addChildNode(noseNode)
+        
+        
         
         let leftEyeNode = FilterNode(with: eyeOptions)
         leftEyeNode.name = "leftEye"
