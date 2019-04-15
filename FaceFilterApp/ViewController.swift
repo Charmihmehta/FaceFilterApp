@@ -8,7 +8,7 @@
 
 import UIKit
 import ARKit
-
+import AVFoundation
 class ViewController: UIViewController {
     
     @IBOutlet weak var sceneView: ARSCNView!
@@ -19,14 +19,32 @@ class ViewController: UIViewController {
     let features = ["nose", "leftEye", "rightEye", "mouth", "hat"]
     let featureIndices = [[8], [1064], [42], [24, 25], [20]]
 
+
     @IBAction func saveScreenhot(){
         
         //1. Create A Snapshot
-        let snapShot = self.sceneView.snapshot()
+        let snapShot:UIImage = self.sceneView.snapshot()
         
         //2. Save It The Photos Album
         UIImageWriteToSavedPhotosAlbum(snapShot, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
         
+    }
+    
+    @IBAction func shareImageTapped(_ sender: Any) {
+        let snapShot:UIImage = self.sceneView.snapshot()
+       guard let image = UIImage(named: "eye4") else { return }
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        print("btn clicked")
+        activityController.completionWithItemsHandler = { (nil, completed, _, error) in
+            if completed {
+                print("completed")
+            } else {
+                print("cancled")
+            }
+        }
+        present(activityController, animated: true) {
+            print("presented")
+        }
     }
     
     override func viewDidLoad() {
@@ -36,6 +54,12 @@ class ViewController: UIViewController {
             fatalError("Face tracking is not supported on this device")
         }
     }
+
+//func filterButtonTapped(sender: UIButton) {
+//    let button = sender as UIButton
+//    
+//    sceneView = button.backgroundImageForState(UIControl.State.Normal) as! UIImage
+//}
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -46,6 +70,7 @@ class ViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
+        
     }
     
 //     func touchesBegan(_ touches: UITapGestureRecognizer, with event: UIEvent?) {

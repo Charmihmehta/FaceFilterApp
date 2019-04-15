@@ -40,14 +40,30 @@
                                     <action selector="saveScreenhot" destination="BYZ-38-t0r" eventType="touchUpInside" id="3up-Ch-AHJ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lz-GA-pLB">
+                                <rect key="frame" x="296" y="40" width="63" height="39"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="ZP1-aT-1Kz"/>
+                                    <constraint firstAttribute="width" constant="63" id="f7F-lF-J9K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareImageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gO9-Ks-gfq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0zZ-SD-2g2" secondAttribute="bottom" constant="30" id="6Cw-SC-ABE"/>
+                            <constraint firstItem="4lz-GA-pLB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7Tk-JH-7AH"/>
                             <constraint firstItem="EIC-y5-9sx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Dwm-Ux-Xz8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4lz-GA-pLB" secondAttribute="trailing" constant="16" id="IVa-CZ-o8j"/>
                             <constraint firstItem="EIC-y5-9sx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qpf-Gc-9xj"/>
                             <constraint firstItem="EIC-y5-9sx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TFp-3s-Rxs"/>
                             <constraint firstItem="0zZ-SD-2g2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="eOw-lF-MmN"/>
+                            <constraint firstItem="4lz-GA-pLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="296" id="il5-PW-0y7"/>
                             <constraint firstItem="EIC-y5-9sx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zUL-bk-uq2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -64,6 +80,21 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ilG-ka-Qll">
+            <objects>
+                <viewController id="Y6M-dR-P2o" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v0W-mQ-5Td">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Vj7-Bz-JXM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OsZ-D2-dG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974" y="143"/>
         </scene>
     </scenes>
     <resources>
