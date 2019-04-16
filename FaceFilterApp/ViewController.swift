@@ -9,6 +9,8 @@
 import UIKit
 import ARKit
 import AVFoundation
+import SnapSliderFilters
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var sceneView: ARSCNView!
@@ -19,7 +21,12 @@ class ViewController: UIViewController {
     let features = ["nose", "leftEye", "rightEye", "mouth", "hat"]
     let featureIndices = [[8], [1064], [42], [24, 25], [20]]
 
-
+    fileprivate let screenView:UIView = UIView(frame: CGRect(origin: CGPoint.zero, size: SNUtils.screenSize))
+    fileprivate let slider:SNSlider = SNSlider(frame: CGRect(origin: CGPoint.zero, size: SNUtils.screenSize))
+    fileprivate let textField = SNTextField(y: SNUtils.screenSize.height/2, width: SNUtils.screenSize.width, heightOfScreen: SNUtils.screenSize.height)
+    fileprivate let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer()
+     fileprivate var data:[SNFilter] = []
+    
     @IBAction func saveScreenhot(){
         
         //1. Create A Snapshot
@@ -53,6 +60,10 @@ class ViewController: UIViewController {
         guard ARFaceTrackingConfiguration.isSupported else {
             fatalError("Face tracking is not supported on this device")
         }
+        setupTextField()
+        setupSlider()
+        view.addSubview(screenView)
+        tapGesture.addTarget(self, action: #selector(handleTap))
     }
 
 //func filterButtonTapped(sender: UIButton) {
@@ -70,7 +81,7 @@ class ViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
-        
+        NotificationCenter.default.removeObserver(textField)
     }
     
 //     func touchesBegan(_ touches: UITapGestureRecognizer, with event: UIEvent?) {
@@ -100,6 +111,32 @@ class ViewController: UIViewController {
         }
     }
     
+    fileprivate func setupTextField() {
+        self.screenView.addSubview(textField)
+        
+        self.tapGesture.delegate = self
+        self.slider.addGestureRecognizer(tapGesture)
+        
+//        NotificationCenter.default.addObserver(self.textField, selector: #selector(SNTextField.keyboardWillShow(_:)), name: NSNotification.Name.UIResponder.keyboardWillShowNotification, object: nil)
+//        NotificationCenter.default.addObserver(self.textField, selector: #selector(SNTextField.keyboardWillHide(_:)), name: NSNotification.Name.UIResponder.keyboardWillHideNotification, object: nil)
+//        NotificationCenter.default.addObserver(self.textField, selector: #selector(SNTextField.keyboardTypeChanged(_:)), name: NSNotification.Name.UIResponder.keyboardDidShowNotification, object: nil)
+    }
+    
+    fileprivate func setupSlider() {
+        //self.createData(UIImage(named: "pic")!)
+        self.slider.dataSource = self
+        self.slider.isUserInteractionEnabled = true
+        self.slider.isMultipleTouchEnabled = true
+        self.slider.isExclusiveTouch = false
+        
+        self.screenView.addSubview(slider)
+        self.slider.reloadData()
+    }
+    
+    fileprivate func updatePicture(_ newImage: UIImage) {
+        //createData(newImage)
+        slider.reloadData()
+    }
     func updateFeatures(for node: SCNNode, using anchor: ARFaceAnchor) {
         for (feature, indices) in zip(features, featureIndices)  {
             let child = node.childNode(withName: feature, recursively: false) as? FilterNode
@@ -128,6 +165,23 @@ class ViewController: UIViewController {
     }
     
 }
+
+extension ViewController: SNSliderDataSource {
+    
+    func numberOfSlides(_ slider: SNSlider) -> Int {
+        return data.count
+    }
+    
+    func slider(_ slider: SNSlider, slideAtIndex index: Int) -> SNFilter {
+        
+        return data[index]
+    }
+    
+    func startAtIndex(_ slider: SNSlider) -> Int {
+        return 0
+    }
+}
+
 extension ViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
         

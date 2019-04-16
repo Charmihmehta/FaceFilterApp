@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2431B15B159CBD60DB38DCF7 /* Pods_FaceFilterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B61C90C254AADE69213D7C /* Pods_FaceFilterApp.framework */; };
 		C128FA642259037B0008BCDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128FA632259037B0008BCDF /* AppDelegate.swift */; };
 		C128FA662259037B0008BCDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128FA652259037B0008BCDF /* ViewController.swift */; };
 		C128FA692259037B0008BCDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C128FA672259037B0008BCDF /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0EC9E42EFFC8C94A64DACBFA /* Pods-FaceFilterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceFilterApp.release.xcconfig"; path = "Target Support Files/Pods-FaceFilterApp/Pods-FaceFilterApp.release.xcconfig"; sourceTree = "<group>"; };
+		51B61C90C254AADE69213D7C /* Pods_FaceFilterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceFilterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C128FA602259037B0008BCDF /* FaceFilterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceFilterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C128FA632259037B0008BCDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C128FA652259037B0008BCDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		C18F5AD3226402C7001CD144 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		C1FE9A6C225D3065000AAF25 /* FilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterNode.swift; sourceTree = "<group>"; };
 		C1FE9A6E225D306E000AAF25 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		DAD73C376D8779E7E02764A1 /* Pods-FaceFilterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceFilterApp.debug.xcconfig"; path = "Target Support Files/Pods-FaceFilterApp/Pods-FaceFilterApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2431B15B159CBD60DB38DCF7 /* Pods_FaceFilterApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				C128FA622259037B0008BCDF /* FaceFilterApp */,
 				C128FA612259037B0008BCDF /* Products */,
+				DB6B7CBE74AB9BA5F28F7BF0 /* Pods */,
+				E1951574955B7926F3EEB94B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +80,24 @@
 			path = FaceFilterApp;
 			sourceTree = "<group>";
 		};
+		DB6B7CBE74AB9BA5F28F7BF0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DAD73C376D8779E7E02764A1 /* Pods-FaceFilterApp.debug.xcconfig */,
+				0EC9E42EFFC8C94A64DACBFA /* Pods-FaceFilterApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E1951574955B7926F3EEB94B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51B61C90C254AADE69213D7C /* Pods_FaceFilterApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C128FA722259037D0008BCDF /* Build configuration list for PBXNativeTarget "FaceFilterApp" */;
 			buildPhases = (
+				C1758CA276FDD76B2B5923EB /* [CP] Check Pods Manifest.lock */,
 				C128FA5C2259037B0008BCDF /* Sources */,
 				C128FA5D2259037B0008BCDF /* Frameworks */,
 				C128FA5E2259037B0008BCDF /* Resources */,
+				EE3DA0FAD58D10BA07DC044E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,6 +165,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C1758CA276FDD76B2B5923EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FaceFilterApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE3DA0FAD58D10BA07DC044E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FaceFilterApp/Pods-FaceFilterApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapSliderFilters/SnapSliderFilters.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapSliderFilters.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FaceFilterApp/Pods-FaceFilterApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C128FA5C2259037B0008BCDF /* Sources */ = {
@@ -292,6 +366,7 @@
 		};
 		C128FA732259037D0008BCDF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAD73C376D8779E7E02764A1 /* Pods-FaceFilterApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -310,6 +385,7 @@
 		};
 		C128FA742259037D0008BCDF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EC9E42EFFC8C94A64DACBFA /* Pods-FaceFilterApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
