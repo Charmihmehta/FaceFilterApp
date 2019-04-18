@@ -36,6 +36,7 @@ class ViewController: UIViewController {
         UIImageWriteToSavedPhotosAlbum(snapShot, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
         
     }
+  
     
     @IBAction func shareImageTapped(_ sender: Any) {
         let snapShot:UIImage = self.sceneView.snapshot()
@@ -57,13 +58,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
+        tapGesture.addTarget(self, action: #selector(handleTf))
         guard ARFaceTrackingConfiguration.isSupported else {
             fatalError("Face tracking is not supported on this device")
         }
         setupTextField()
         setupSlider()
         view.addSubview(screenView)
-        tapGesture.addTarget(self, action: #selector(handleTap))
+    
     }
 
 //func filterButtonTapped(sender: UIButton) {
@@ -116,6 +118,7 @@ class ViewController: UIViewController {
         
         self.tapGesture.delegate = self
         self.slider.addGestureRecognizer(tapGesture)
+       
         
 //        NotificationCenter.default.addObserver(self.textField, selector: #selector(SNTextField.keyboardWillShow(_:)), name: NSNotification.Name.UIResponder.keyboardWillShowNotification, object: nil)
 //        NotificationCenter.default.addObserver(self.textField, selector: #selector(SNTextField.keyboardWillHide(_:)), name: NSNotification.Name.UIResponder.keyboardWillHideNotification, object: nil)
@@ -123,18 +126,25 @@ class ViewController: UIViewController {
     }
     
     fileprivate func setupSlider() {
-        //self.createData(UIImage(named: "pic")!)
+        self.createData(UIImage(named: "eye1")!)
         self.slider.dataSource = self
         self.slider.isUserInteractionEnabled = true
         self.slider.isMultipleTouchEnabled = true
         self.slider.isExclusiveTouch = false
-        
+
         self.screenView.addSubview(slider)
         self.slider.reloadData()
     }
     
+    fileprivate func createData(_ image: UIImage) {
+        self.data = SNFilter.generateFilters(SNFilter(frame: self.slider.frame, withImage: image), filters: SNFilter.filterNameList)
+        self.data[1].addSticker(SNSticker(frame: CGRect(x: 195, y: 30, width: 90, height: 90), image: UIImage(named: "stick2")!))
+        self.data[2].addSticker(SNSticker(frame: CGRect(x: 30, y: 100, width: 250, height: 250), image: UIImage(named: "stick3")!))
+        self.data[3].addSticker(SNSticker(frame: CGRect(x: 20, y: 00, width: 140, height: 140), image: UIImage(named: "stick")!))
+    }
+    
     fileprivate func updatePicture(_ newImage: UIImage) {
-        //createData(newImage)
+        createData(newImage)
         slider.reloadData()
     }
     func updateFeatures(for node: SCNNode, using anchor: ARFaceAnchor) {
@@ -167,18 +177,25 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: SNSliderDataSource {
-    
+
     func numberOfSlides(_ slider: SNSlider) -> Int {
         return data.count
     }
-    
+
     func slider(_ slider: SNSlider, slideAtIndex index: Int) -> SNFilter {
-        
+
         return data[index]
     }
-    
+
     func startAtIndex(_ slider: SNSlider) -> Int {
         return 0
+    }
+}
+
+extension ViewController: UIGestureRecognizerDelegate {
+
+    @objc func handleTf() {
+        self.textField.handleTap()
     }
 }
 
