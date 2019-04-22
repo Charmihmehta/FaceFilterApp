@@ -24,6 +24,9 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func tutorialBtn(_ sender: Any) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "TutorialVC") as! TutorialViewController
+        self.present(nextViewController, animated:true, completion:nil)
     }
     /*
     // MARK: - Navigation
