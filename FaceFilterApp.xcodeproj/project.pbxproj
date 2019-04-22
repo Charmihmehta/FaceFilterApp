@@ -16,6 +16,7 @@
 		C18F5AD4226402C7001CD144 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18F5AD3226402C7001CD144 /* ImageViewController.swift */; };
 		C1FE9A6D225D3065000AAF25 /* FilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE9A6C225D3065000AAF25 /* FilterNode.swift */; };
 		C1FE9A6F225D306E000AAF25 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE9A6E225D306E000AAF25 /* StringExtension.swift */; };
+		FCE1ED89226E546B0023C42C /* icons8-snapchat-64.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE1ED88226E546B0023C42C /* icons8-snapchat-64.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C1FE9A6C225D3065000AAF25 /* FilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterNode.swift; sourceTree = "<group>"; };
 		C1FE9A6E225D306E000AAF25 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		DAD73C376D8779E7E02764A1 /* Pods-FaceFilterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceFilterApp.debug.xcconfig"; path = "Target Support Files/Pods-FaceFilterApp/Pods-FaceFilterApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FCE1ED88226E546B0023C42C /* icons8-snapchat-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-snapchat-64.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				C128FA652259037B0008BCDF /* ViewController.swift */,
 				C128FA672259037B0008BCDF /* Main.storyboard */,
 				C128FA6A2259037D0008BCDF /* Assets.xcassets */,
+				FCE1ED88226E546B0023C42C /* icons8-snapchat-64.png */,
 				C128FA6C2259037D0008BCDF /* LaunchScreen.storyboard */,
 				C18F5AD3226402C7001CD144 /* ImageViewController.swift */,
 				C1FE9A6C225D3065000AAF25 /* FilterNode.swift */,
@@ -160,6 +163,7 @@
 				C128FA6E2259037D0008BCDF /* LaunchScreen.storyboard in Resources */,
 				C128FA6B2259037D0008BCDF /* Assets.xcassets in Resources */,
 				C128FA692259037B0008BCDF /* Main.storyboard in Resources */,
+				FCE1ED89226E546B0023C42C /* icons8-snapchat-64.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
