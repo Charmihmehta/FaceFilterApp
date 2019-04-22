@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
 //  FaceFilterApp
-//cxc
+//
 //  Created by Abita Shiney on 2019-04-06.
 //  Copyright © 2019 Abita Shiney. All rights reserved.
 //
@@ -20,59 +20,21 @@ class ViewController: UIViewController {
     let hatOptions = ["hat1", "hat2","head3","head8","head9","head10"]
     let features = ["nose", "leftEye", "rightEye", "mouth", "hat"]
     let featureIndices = [[8], [1064], [42], [24, 25], [20]]
-
-    fileprivate let screenView:UIView = UIView(frame: CGRect(origin: CGPoint.zero, size: SNUtils.screenSize))
-    fileprivate let slider:SNSlider = SNSlider(frame: CGRect(origin: CGPoint.zero, size: SNUtils.screenSize))
+    
     fileprivate let textField = SNTextField(y: SNUtils.screenSize.height/2, width: SNUtils.screenSize.width, heightOfScreen: SNUtils.screenSize.height)
     fileprivate let tapGesture:UITapGestureRecognizer = UITapGestureRecognizer()
-     fileprivate var data:[SNFilter] = []
-    
-    @IBAction func saveScreenhot(){
-        
-        //1. Create A Snapshot
-        let snapShot:UIImage = self.sceneView.snapshot()
-        
-        //2. Save It The Photos Album
-        UIImageWriteToSavedPhotosAlbum(snapShot, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-        
-    }
-  
-    
-    @IBAction func shareImageTapped(_ sender: Any) {
-        let snapShot:UIImage = self.sceneView.snapshot()
-       guard let image = UIImage(named: "eye4") else { return }
-        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-        print("btn clicked")
-        activityController.completionWithItemsHandler = { (nil, completed, _, error) in
-            if completed {
-                print("completed")
-            } else {
-                print("cancled")
-            }
-        }
-        present(activityController, animated: true) {
-            print("presented")
-        }
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sceneView.delegate = self
+        setupTextField()
+      //  view.addSubview(sceneView)
         tapGesture.addTarget(self, action: #selector(handleTf))
         guard ARFaceTrackingConfiguration.isSupported else {
             fatalError("Face tracking is not supported on this device")
         }
-        setupTextField()
-        setupSlider()
-        view.addSubview(screenView)
-    
+        
     }
-
-//func filterButtonTapped(sender: UIButton) {
-//    let button = sender as UIButton
-//    
-//    sceneView = button.backgroundImageForState(UIControl.State.Normal) as! UIImage
-//}
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -86,14 +48,46 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(textField)
     }
     
-//     func touchesBegan(_ touches: UITapGestureRecognizer, with event: UIEvent?) {
-//        let location = touches.location(in: sceneView)
-//                let results = sceneView.hitTest(location, options: nil)
-//                if let result = results.first,
-//                    let node = result.node as? FilterNode {
-//                    node.next()
-//                }
-//    }
+    @IBAction func saveScreenhot(){
+//        [weak weakSelf = self] in
+//        let picture = SNUtils.screenShot(weakSelf?.screenView)
+//        if let image = picture {
+//            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+//        }
+      //  1. Create a Snapshot
+//        let snapShot:UIImage = self.sceneView.snapshot()
+//
+//        //2. Save It The Photos Album
+//        UIImageWriteToSavedPhotosAlbum(snapShot, self, nil, nil)
+//
+//        showToast(message: "Saved")
+//
+         let screenShot = snapshot(of: CGRect(x: 80, y: 80, width: 100, height: 100))
+       
+    }
+  
+    func snapshot(of rect: CGRect? = nil) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(self.sceneView.bounds.size, self.sceneView.isOpaque, 0)
+        self.sceneView.drawHierarchy(in: self.sceneView.bounds, afterScreenUpdates: true)
+        let fullImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        guard let image = fullImage, let rect = rect else { return fullImage }
+        let scale = image.scale
+        let scaledRect = CGRect(x: rect.origin.x * scale, y: rect.origin.y * scale, width: rect.size.width * scale, height: rect.size.height * scale)
+        guard let cgImage = image.cgImage?.cropping(to: scaledRect) else { return nil }
+        return UIImage(cgImage: cgImage, scale: scale, orientation: .up)
+    }
+    
+    @IBAction func shareImageTapped(_ sender: Any) {
+        let snapShot:UIImage = self.sceneView.snapshot()
+
+        var imagesToShare = [AnyObject]()
+        imagesToShare.append(snapShot)
+
+        let activityViewController = UIActivityViewController(activityItems: imagesToShare , applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        present(activityViewController, animated: true, completion: nil)
+    }
     
     @IBAction func handleTap(_ sender: UITapGestureRecognizer) {
         let location = sender.location(in: sceneView)
@@ -102,7 +96,37 @@ class ViewController: UIViewController {
             let node = result.node as? FilterNode {
             node.next()
         }
+        else{
+            self.textField.handleTap()
+        }
     }
+    
+    fileprivate func setupTextField() {
+        self.sceneView.addSubview(textField)
+        self.tapGesture.delegate = self
+    }
+    
+    func showToast(message : String) {
+        
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-180, width: 125, height: 35))
+        toastLabel.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        toastLabel.textColor = UIColor.black
+        toastLabel.textAlignment = .center
+        toastLabel.font = UIFont(name: "Montserrat-Light", size: 12.0)
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 5;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
+    }
+    
+
+
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         
@@ -113,40 +137,6 @@ class ViewController: UIViewController {
         }
     }
     
-    fileprivate func setupTextField() {
-        self.screenView.addSubview(textField)
-        
-        self.tapGesture.delegate = self
-        self.slider.addGestureRecognizer(tapGesture)
-       
-        
-//        NotificationCenter.default.addObserver(self.textField, selector: #selector(SNTextField.keyboardWillShow(_:)), name: NSNotification.Name.UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self.textField, selector: #selector(SNTextField.keyboardWillHide(_:)), name: NSNotification.Name.UIResponder.keyboardWillHideNotification, object: nil)
-//        NotificationCenter.default.addObserver(self.textField, selector: #selector(SNTextField.keyboardTypeChanged(_:)), name: NSNotification.Name.UIResponder.keyboardDidShowNotification, object: nil)
-    }
-    
-    fileprivate func setupSlider() {
-        self.createData(UIImage(named: "eye1")!)
-        self.slider.dataSource = self
-        self.slider.isUserInteractionEnabled = true
-        self.slider.isMultipleTouchEnabled = true
-        self.slider.isExclusiveTouch = false
-
-        self.screenView.addSubview(slider)
-        self.slider.reloadData()
-    }
-    
-    fileprivate func createData(_ image: UIImage) {
-        self.data = SNFilter.generateFilters(SNFilter(frame: self.slider.frame, withImage: image), filters: SNFilter.filterNameList)
-        self.data[1].addSticker(SNSticker(frame: CGRect(x: 195, y: 30, width: 90, height: 90), image: UIImage(named: "stick2")!))
-        self.data[2].addSticker(SNSticker(frame: CGRect(x: 30, y: 100, width: 250, height: 250), image: UIImage(named: "stick3")!))
-        self.data[3].addSticker(SNSticker(frame: CGRect(x: 20, y: 00, width: 140, height: 140), image: UIImage(named: "stick")!))
-    }
-    
-    fileprivate func updatePicture(_ newImage: UIImage) {
-        createData(newImage)
-        slider.reloadData()
-    }
     func updateFeatures(for node: SCNNode, using anchor: ARFaceAnchor) {
         for (feature, indices) in zip(features, featureIndices)  {
             let child = node.childNode(withName: feature, recursively: false) as? FilterNode
@@ -174,22 +164,6 @@ class ViewController: UIViewController {
         }
     }
     
-}
-
-extension ViewController: SNSliderDataSource {
-
-    func numberOfSlides(_ slider: SNSlider) -> Int {
-        return data.count
-    }
-
-    func slider(_ slider: SNSlider, slideAtIndex index: Int) -> SNFilter {
-
-        return data[index]
-    }
-
-    func startAtIndex(_ slider: SNSlider) -> Int {
-        return 0
-    }
 }
 
 extension ViewController: UIGestureRecognizerDelegate {
@@ -252,8 +226,6 @@ extension ViewController: ARSCNViewDelegate {
         }
         faceGeometry.update(from: faceAnchor.geometry)
         updateFeatures(for: node, using: faceAnchor)
-        
-        
     }
     
 }
