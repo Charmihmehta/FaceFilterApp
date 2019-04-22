@@ -24,6 +24,7 @@
 /* Begin PBXFileReference section */
 		0EC9E42EFFC8C94A64DACBFA /* Pods-FaceFilterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceFilterApp.release.xcconfig"; path = "Target Support Files/Pods-FaceFilterApp/Pods-FaceFilterApp.release.xcconfig"; sourceTree = "<group>"; };
 		51B61C90C254AADE69213D7C /* Pods_FaceFilterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceFilterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C125D0E9226E6A56001D1318 /* Unknown-7 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Unknown-7"; sourceTree = "<group>"; };
 		C128FA602259037B0008BCDF /* FaceFilterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceFilterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C128FA632259037B0008BCDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C128FA652259037B0008BCDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 				FCE1ED8E226E5F8A0023C42C /* TutorialViewController.swift */,
 				C128FA6A2259037D0008BCDF /* Assets.xcassets */,
 				FCE1ED88226E546B0023C42C /* icons8-snapchat-64.png */,
+				C125D0E9226E6A56001D1318 /* Unknown-7 */,
 				C128FA6C2259037D0008BCDF /* LaunchScreen.storyboard */,
 				C18F5AD3226402C7001CD144 /* ImageViewController.swift */,
 				C1FE9A6C225D3065000AAF25 /* FilterNode.swift */,
