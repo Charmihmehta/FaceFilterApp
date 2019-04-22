@@ -14,9 +14,6 @@
 		C128FA6B2259037D0008BCDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C128FA6A2259037D0008BCDF /* Assets.xcassets */; };
 		C128FA6E2259037D0008BCDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C128FA6C2259037D0008BCDF /* LaunchScreen.storyboard */; };
 		C18F5AD4226402C7001CD144 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18F5AD3226402C7001CD144 /* ImageViewController.swift */; };
-		C1BC7D7822693D1100A256CD /* stick.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC7D7722693D1100A256CD /* stick.png */; };
-		C1BC7D7A22693D1B00A256CD /* stick2.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC7D7922693D1B00A256CD /* stick2.png */; };
-		C1BC7D7C22693D2100A256CD /* stick3.png in Resources */ = {isa = PBXBuildFile; fileRef = C1BC7D7B22693D2000A256CD /* stick3.png */; };
 		C1FE9A6D225D3065000AAF25 /* FilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE9A6C225D3065000AAF25 /* FilterNode.swift */; };
 		C1FE9A6F225D306E000AAF25 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE9A6E225D306E000AAF25 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
@@ -32,9 +29,6 @@
 		C128FA6D2259037D0008BCDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C128FA6F2259037D0008BCDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C18F5AD3226402C7001CD144 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		C1BC7D7722693D1100A256CD /* stick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick.png; sourceTree = "<group>"; };
-		C1BC7D7922693D1B00A256CD /* stick2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick2.png; sourceTree = "<group>"; };
-		C1BC7D7B22693D2000A256CD /* stick3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stick3.png; sourceTree = "<group>"; };
 		C1FE9A6C225D3065000AAF25 /* FilterNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterNode.swift; sourceTree = "<group>"; };
 		C1FE9A6E225D306E000AAF25 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		DAD73C376D8779E7E02764A1 /* Pods-FaceFilterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceFilterApp.debug.xcconfig"; path = "Target Support Files/Pods-FaceFilterApp/Pods-FaceFilterApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,9 +70,6 @@
 				C128FA632259037B0008BCDF /* AppDelegate.swift */,
 				C128FA652259037B0008BCDF /* ViewController.swift */,
 				C128FA672259037B0008BCDF /* Main.storyboard */,
-				C1BC7D7722693D1100A256CD /* stick.png */,
-				C1BC7D7922693D1B00A256CD /* stick2.png */,
-				C1BC7D7B22693D2000A256CD /* stick3.png */,
 				C128FA6A2259037D0008BCDF /* Assets.xcassets */,
 				C128FA6C2259037D0008BCDF /* LaunchScreen.storyboard */,
 				C18F5AD3226402C7001CD144 /* ImageViewController.swift */,
@@ -117,7 +108,7 @@
 				C128FA5C2259037B0008BCDF /* Sources */,
 				C128FA5D2259037B0008BCDF /* Frameworks */,
 				C128FA5E2259037B0008BCDF /* Resources */,
-				EE3DA0FAD58D10BA07DC044E /* [CP] Embed Pods Frameworks */,
+				F9B40452ECC7746A8E2E37FA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,10 +159,7 @@
 			files = (
 				C128FA6E2259037D0008BCDF /* LaunchScreen.storyboard in Resources */,
 				C128FA6B2259037D0008BCDF /* Assets.xcassets in Resources */,
-				C1BC7D7C22693D2100A256CD /* stick3.png in Resources */,
-				C1BC7D7822693D1100A256CD /* stick.png in Resources */,
 				C128FA692259037B0008BCDF /* Main.storyboard in Resources */,
-				C1BC7D7A22693D1B00A256CD /* stick2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +188,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EE3DA0FAD58D10BA07DC044E /* [CP] Embed Pods Frameworks */ = {
+		F9B40452ECC7746A8E2E37FA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

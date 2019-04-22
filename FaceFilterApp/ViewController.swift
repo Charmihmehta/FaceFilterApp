@@ -54,15 +54,15 @@ class ViewController: UIViewController {
 //        if let image = picture {
 //            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
 //        }
-      //  1. Create a Snapshot
-//        let snapShot:UIImage = self.sceneView.snapshot()
+     //   1. Create a Snapshot
+        let snapShot:UIImage = self.sceneView.snapshot()
+
+        //2. Save It The Photos Album
+        UIImageWriteToSavedPhotosAlbum(snapShot, self, nil, nil)
+
+        showToast(message: "Saved")
 //
-//        //2. Save It The Photos Album
-//        UIImageWriteToSavedPhotosAlbum(snapShot, self, nil, nil)
-//
-//        showToast(message: "Saved")
-//
-         let screenShot = snapshot(of: CGRect(x: 80, y: 80, width: 100, height: 100))
+      //   let screenShot = snapshot(of: CGRect(x: 80, y: 80, width: 100, height: 100))
        
     }
   
