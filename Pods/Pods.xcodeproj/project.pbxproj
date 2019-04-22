@@ -1,0 +1,631 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E4A27DB52904159A78984DC86AA88F1 /* SNUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D40AA40A264E259304F8C9ADEBF5FC /* SNUtils.swift */; };
+		25C79985054E9817749EE8B40ADED153 /* SNSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5DD43CCCEC42CE444383215D684264 /* SNSlider.swift */; };
+		3EDF042BAC0A0B8B279BF6DF8D620B5C /* SNButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3850A12FECE08788D440ED2DA9FC52C /* SNButton.swift */; };
+		4AF229648F1460713ABB1C09717F3010 /* SnapSliderFilters-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 816F2E37E950F682D7486C012A283D4B /* SnapSliderFilters-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52D79F5DD89A797F38DE99DCFA1DA427 /* SNSliderDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C716051B104D5C3EC3D0A634A4779E /* SNSliderDataSource.swift */; };
+		52FF46DD730FA75C96885CBE84CF4737 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8943A2D8336DBE78C8FF470C584BB1 /* UIImageExtension.swift */; };
+		6157099B06FF89FAAEE83A5E4A60EE77 /* SNFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C47B71B5DDC37353B11F14D8AB94F1 /* SNFilter.swift */; };
+		6EA7C4869CB86CF5A1BFE38B139328C8 /* SnapSliderFilters-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F924BDDDA603D727DCA99E6A3462EC8 /* SnapSliderFilters-dummy.m */; };
+		846042A559DC1C748B7769BD4324809B /* Pods-FaceFilterApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 676D37758C8043E3D55B2C70AC7850B5 /* Pods-FaceFilterApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89C7A7E0F6670508527B51E1EFDE9EF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		9E9DE6E0A6E721D3ACED4C113CF84018 /* SNSticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916A7055BD83C821AAD40F031BCEE2E9 /* SNSticker.swift */; };
+		B145BE4B980572C92F7D509DC98E7068 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		BB0E0B2DD109194A8B41AF37D68E06E6 /* SNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75725E7BC87021BE6B6D0B1738DD9961 /* SNTextField.swift */; };
+		C2EC93581A7B063D7FD46985EE8623CE /* Pods-FaceFilterApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 168BDCF89325359B7B64465CB5973977 /* Pods-FaceFilterApp-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93E9E9F6BE3C70928C1E34B34753EC6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFA14A222D73800056CF2422F3369857;
+			remoteInfo = SnapSliderFilters;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0473EE2F117F75DE5F29D17606C7E843 /* Pods-FaceFilterApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FaceFilterApp.modulemap"; sourceTree = "<group>"; };
+		168BDCF89325359B7B64465CB5973977 /* Pods-FaceFilterApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FaceFilterApp-dummy.m"; sourceTree = "<group>"; };
+		1E509DA45A652B999D6E9BC95B781508 /* Pods_FaceFilterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FaceFilterApp.framework; path = "Pods-FaceFilterApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2101C618544E5137E3A40CF73834ACEE /* Pods-FaceFilterApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FaceFilterApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		43D40AA40A264E259304F8C9ADEBF5FC /* SNUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNUtils.swift; path = SnapSliderFilters/Classes/SNUtils.swift; sourceTree = "<group>"; };
+		47C47B71B5DDC37353B11F14D8AB94F1 /* SNFilter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNFilter.swift; path = SnapSliderFilters/Classes/SNFilter.swift; sourceTree = "<group>"; };
+		676D37758C8043E3D55B2C70AC7850B5 /* Pods-FaceFilterApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FaceFilterApp-umbrella.h"; sourceTree = "<group>"; };
+		75725E7BC87021BE6B6D0B1738DD9961 /* SNTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNTextField.swift; path = SnapSliderFilters/Classes/SNTextField.swift; sourceTree = "<group>"; };
+		816F2E37E950F682D7486C012A283D4B /* SnapSliderFilters-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapSliderFilters-umbrella.h"; sourceTree = "<group>"; };
+		8206973BED861C868E63104AB0FDE0A2 /* Pods-FaceFilterApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FaceFilterApp-frameworks.sh"; sourceTree = "<group>"; };
+		8B817C4D5F611AAC33505AB0F850E205 /* SnapSliderFilters-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapSliderFilters-Info.plist"; sourceTree = "<group>"; };
+		8DD3F6D87CA460BBD0ECD3D5FF5F3922 /* SnapSliderFilters.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapSliderFilters.xcconfig; sourceTree = "<group>"; };
+		8F924BDDDA603D727DCA99E6A3462EC8 /* SnapSliderFilters-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapSliderFilters-dummy.m"; sourceTree = "<group>"; };
+		916A7055BD83C821AAD40F031BCEE2E9 /* SNSticker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNSticker.swift; path = SnapSliderFilters/Classes/SNSticker.swift; sourceTree = "<group>"; };
+		9328A08B857F7A6777BD2F6306680F67 /* Pods-FaceFilterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FaceFilterApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9AC36A0D2C785A8EB1DC40B50FD2E06A /* Pods-FaceFilterApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FaceFilterApp-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F5DD43CCCEC42CE444383215D684264 /* SNSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNSlider.swift; path = SnapSliderFilters/Classes/SNSlider.swift; sourceTree = "<group>"; };
+		A0C716051B104D5C3EC3D0A634A4779E /* SNSliderDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNSliderDataSource.swift; path = SnapSliderFilters/Classes/SNSliderDataSource.swift; sourceTree = "<group>"; };
+		A22BC8D28D7AC43385D714A076233CC4 /* Pods-FaceFilterApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FaceFilterApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CCEAC09B8FFC4444E32C887AD5A2E371 /* SnapSliderFilters-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapSliderFilters-prefix.pch"; sourceTree = "<group>"; };
+		D0D2E78B8700FA9368E87BBD008F04E7 /* SnapSliderFilters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapSliderFilters.framework; path = SnapSliderFilters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D426CC04EDCDB42D60CAA4A170462F7B /* Pods-FaceFilterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FaceFilterApp.release.xcconfig"; sourceTree = "<group>"; };
+		EE8943A2D8336DBE78C8FF470C584BB1 /* UIImageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIImageExtension.swift; path = SnapSliderFilters/Classes/UIImageExtension.swift; sourceTree = "<group>"; };
+		EF4DF5B013D912494A17DE0C19B1DAE7 /* SnapSliderFilters.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapSliderFilters.modulemap; sourceTree = "<group>"; };
+		F3850A12FECE08788D440ED2DA9FC52C /* SNButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SNButton.swift; path = SnapSliderFilters/Classes/SNButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9DC1F4C6E1969AE9AF8D7D7A4E6F3102 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89C7A7E0F6670508527B51E1EFDE9EF9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C51513A4D413E2EC1FF2E5CDDEA2D847 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B145BE4B980572C92F7D509DC98E7068 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		385F2024965599C73E67B8348A66D719 /* SnapSliderFilters */ = {
+			isa = PBXGroup;
+			children = (
+				F3850A12FECE08788D440ED2DA9FC52C /* SNButton.swift */,
+				47C47B71B5DDC37353B11F14D8AB94F1 /* SNFilter.swift */,
+				9F5DD43CCCEC42CE444383215D684264 /* SNSlider.swift */,
+				A0C716051B104D5C3EC3D0A634A4779E /* SNSliderDataSource.swift */,
+				916A7055BD83C821AAD40F031BCEE2E9 /* SNSticker.swift */,
+				75725E7BC87021BE6B6D0B1738DD9961 /* SNTextField.swift */,
+				43D40AA40A264E259304F8C9ADEBF5FC /* SNUtils.swift */,
+				EE8943A2D8336DBE78C8FF470C584BB1 /* UIImageExtension.swift */,
+				D38D93E85B8A6B28BC3F810027C121AB /* Support Files */,
+			);
+			name = SnapSliderFilters;
+			path = SnapSliderFilters;
+			sourceTree = "<group>";
+		};
+		41C2747FC4ABEF46D15BA8B138FBE402 /* Pods-FaceFilterApp */ = {
+			isa = PBXGroup;
+			children = (
+				0473EE2F117F75DE5F29D17606C7E843 /* Pods-FaceFilterApp.modulemap */,
+				2101C618544E5137E3A40CF73834ACEE /* Pods-FaceFilterApp-acknowledgements.markdown */,
+				A22BC8D28D7AC43385D714A076233CC4 /* Pods-FaceFilterApp-acknowledgements.plist */,
+				168BDCF89325359B7B64465CB5973977 /* Pods-FaceFilterApp-dummy.m */,
+				8206973BED861C868E63104AB0FDE0A2 /* Pods-FaceFilterApp-frameworks.sh */,
+				9AC36A0D2C785A8EB1DC40B50FD2E06A /* Pods-FaceFilterApp-Info.plist */,
+				676D37758C8043E3D55B2C70AC7850B5 /* Pods-FaceFilterApp-umbrella.h */,
+				9328A08B857F7A6777BD2F6306680F67 /* Pods-FaceFilterApp.debug.xcconfig */,
+				D426CC04EDCDB42D60CAA4A170462F7B /* Pods-FaceFilterApp.release.xcconfig */,
+			);
+			name = "Pods-FaceFilterApp";
+			path = "Target Support Files/Pods-FaceFilterApp";
+			sourceTree = "<group>";
+		};
+		561750105D8B3FBDF66B35ACB5D8295D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1E509DA45A652B999D6E9BC95B781508 /* Pods_FaceFilterApp.framework */,
+				D0D2E78B8700FA9368E87BBD008F04E7 /* SnapSliderFilters.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83F8B796E46E21CDF86D33C4AC4EFCE7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				385F2024965599C73E67B8348A66D719 /* SnapSliderFilters */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				83F8B796E46E21CDF86D33C4AC4EFCE7 /* Pods */,
+				561750105D8B3FBDF66B35ACB5D8295D /* Products */,
+				F61FF07E1CF4D9DDF601288024004B0C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B055D0CFEA43187E72B03DED11F5662 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D38D93E85B8A6B28BC3F810027C121AB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF4DF5B013D912494A17DE0C19B1DAE7 /* SnapSliderFilters.modulemap */,
+				8DD3F6D87CA460BBD0ECD3D5FF5F3922 /* SnapSliderFilters.xcconfig */,
+				8F924BDDDA603D727DCA99E6A3462EC8 /* SnapSliderFilters-dummy.m */,
+				8B817C4D5F611AAC33505AB0F850E205 /* SnapSliderFilters-Info.plist */,
+				CCEAC09B8FFC4444E32C887AD5A2E371 /* SnapSliderFilters-prefix.pch */,
+				816F2E37E950F682D7486C012A283D4B /* SnapSliderFilters-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SnapSliderFilters";
+			sourceTree = "<group>";
+		};
+		F61FF07E1CF4D9DDF601288024004B0C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				41C2747FC4ABEF46D15BA8B138FBE402 /* Pods-FaceFilterApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C10426505D1D090C5061B2DBB710CF01 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				846042A559DC1C748B7769BD4324809B /* Pods-FaceFilterApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EA4BF4AE85CBDA2C96B4CACC89056B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AF229648F1460713ABB1C09717F3010 /* SnapSliderFilters-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0B8C213CBD1AE6BD337FDB282D722CB7 /* Pods-FaceFilterApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E194D68B9D3A056A3D852E3A79D8BE22 /* Build configuration list for PBXNativeTarget "Pods-FaceFilterApp" */;
+			buildPhases = (
+				C10426505D1D090C5061B2DBB710CF01 /* Headers */,
+				EE4265773927FCC2D058CC0D3B9C0DE3 /* Sources */,
+				C51513A4D413E2EC1FF2E5CDDEA2D847 /* Frameworks */,
+				37DDAA1C3B2C888D632C8B72DE3762C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C3E6996FA0D2CFD2103EDDF642042B0 /* PBXTargetDependency */,
+			);
+			name = "Pods-FaceFilterApp";
+			productName = "Pods-FaceFilterApp";
+			productReference = 1E509DA45A652B999D6E9BC95B781508 /* Pods_FaceFilterApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CFA14A222D73800056CF2422F3369857 /* SnapSliderFilters */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B241C044B1E6618BC58A5B144FBAAB4 /* Build configuration list for PBXNativeTarget "SnapSliderFilters" */;
+			buildPhases = (
+				E9EA4BF4AE85CBDA2C96B4CACC89056B /* Headers */,
+				F867D8A68C0821325934EB2FFE98E0C7 /* Sources */,
+				9DC1F4C6E1969AE9AF8D7D7A4E6F3102 /* Frameworks */,
+				7991DC3B1FAEFE6AEFDFD1E79FAD8BD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnapSliderFilters;
+			productName = SnapSliderFilters;
+			productReference = D0D2E78B8700FA9368E87BBD008F04E7 /* SnapSliderFilters.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 561750105D8B3FBDF66B35ACB5D8295D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0B8C213CBD1AE6BD337FDB282D722CB7 /* Pods-FaceFilterApp */,
+				CFA14A222D73800056CF2422F3369857 /* SnapSliderFilters */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37DDAA1C3B2C888D632C8B72DE3762C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7991DC3B1FAEFE6AEFDFD1E79FAD8BD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE4265773927FCC2D058CC0D3B9C0DE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2EC93581A7B063D7FD46985EE8623CE /* Pods-FaceFilterApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F867D8A68C0821325934EB2FFE98E0C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EA7C4869CB86CF5A1BFE38B139328C8 /* SnapSliderFilters-dummy.m in Sources */,
+				3EDF042BAC0A0B8B279BF6DF8D620B5C /* SNButton.swift in Sources */,
+				6157099B06FF89FAAEE83A5E4A60EE77 /* SNFilter.swift in Sources */,
+				25C79985054E9817749EE8B40ADED153 /* SNSlider.swift in Sources */,
+				52D79F5DD89A797F38DE99DCFA1DA427 /* SNSliderDataSource.swift in Sources */,
+				9E9DE6E0A6E721D3ACED4C113CF84018 /* SNSticker.swift in Sources */,
+				BB0E0B2DD109194A8B41AF37D68E06E6 /* SNTextField.swift in Sources */,
+				1E4A27DB52904159A78984DC86AA88F1 /* SNUtils.swift in Sources */,
+				52FF46DD730FA75C96885CBE84CF4737 /* UIImageExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C3E6996FA0D2CFD2103EDDF642042B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnapSliderFilters;
+			target = CFA14A222D73800056CF2422F3369857 /* SnapSliderFilters */;
+			targetProxy = 93E9E9F6BE3C70928C1E34B34753EC6B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5177D0750F2943D61882983918C0E408 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D426CC04EDCDB42D60CAA4A170462F7B /* Pods-FaceFilterApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FaceFilterApp/Pods-FaceFilterApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FaceFilterApp/Pods-FaceFilterApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		62B6E4AE5B284C6D7CF983A8D075693F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9328A08B857F7A6777BD2F6306680F67 /* Pods-FaceFilterApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FaceFilterApp/Pods-FaceFilterApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FaceFilterApp/Pods-FaceFilterApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A105C1752A0A49B30ED621B71E226CDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B64409F5F5D09FED6E01EA8C2485F5E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DD3F6D87CA460BBD0ECD3D5FF5F3922 /* SnapSliderFilters.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SnapSliderFilters/SnapSliderFilters-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapSliderFilters/SnapSliderFilters-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SnapSliderFilters/SnapSliderFilters.modulemap";
+				PRODUCT_MODULE_NAME = SnapSliderFilters;
+				PRODUCT_NAME = SnapSliderFilters;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C1391485F05B41BD35738A433056B7FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FC12EDC543F1948537506C0DD411D8D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DD3F6D87CA460BBD0ECD3D5FF5F3922 /* SnapSliderFilters.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SnapSliderFilters/SnapSliderFilters-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SnapSliderFilters/SnapSliderFilters-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SnapSliderFilters/SnapSliderFilters.modulemap";
+				PRODUCT_MODULE_NAME = SnapSliderFilters;
+				PRODUCT_NAME = SnapSliderFilters;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1391485F05B41BD35738A433056B7FA /* Debug */,
+				A105C1752A0A49B30ED621B71E226CDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B241C044B1E6618BC58A5B144FBAAB4 /* Build configuration list for PBXNativeTarget "SnapSliderFilters" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B64409F5F5D09FED6E01EA8C2485F5E9 /* Debug */,
+				FC12EDC543F1948537506C0DD411D8D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E194D68B9D3A056A3D852E3A79D8BE22 /* Build configuration list for PBXNativeTarget "Pods-FaceFilterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62B6E4AE5B284C6D7CF983A8D075693F /* Debug */,
+				5177D0750F2943D61882983918C0E408 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

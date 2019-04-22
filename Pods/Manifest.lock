@@ -1,0 +1,16 @@
+PODS:
+  - SnapSliderFilters (2.0)
+
+DEPENDENCIES:
+  - SnapSliderFilters
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SnapSliderFilters
+
+SPEC CHECKSUMS:
+  SnapSliderFilters: 7f571683b05cf70b8d398e4a0e45691bd9f03a33
+
+PODFILE CHECKSUM: c8e8667011d7580f2a84abe88fa1e5a67032d3ff
+
+COCOAPODS: 1.6.1
