@@ -17,6 +17,7 @@
 		C1FE9A6D225D3065000AAF25 /* FilterNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE9A6C225D3065000AAF25 /* FilterNode.swift */; };
 		C1FE9A6F225D306E000AAF25 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FE9A6E225D306E000AAF25 /* StringExtension.swift */; };
 		FCE1ED89226E546B0023C42C /* icons8-snapchat-64.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE1ED88226E546B0023C42C /* icons8-snapchat-64.png */; };
+		FCE1ED8D226E59110023C42C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1ED8C226E59110023C42C /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C1FE9A6E225D306E000AAF25 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		DAD73C376D8779E7E02764A1 /* Pods-FaceFilterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceFilterApp.debug.xcconfig"; path = "Target Support Files/Pods-FaceFilterApp/Pods-FaceFilterApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FCE1ED88226E546B0023C42C /* icons8-snapchat-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-snapchat-64.png"; sourceTree = "<group>"; };
+		FCE1ED8C226E59110023C42C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				C1FE9A6C225D3065000AAF25 /* FilterNode.swift */,
 				C1FE9A6E225D306E000AAF25 /* StringExtension.swift */,
 				C128FA6F2259037D0008BCDF /* Info.plist */,
+				FCE1ED8C226E59110023C42C /* FirstViewController.swift */,
 			);
 			path = FaceFilterApp;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				C1FE9A6F225D306E000AAF25 /* StringExtension.swift in Sources */,
 				C1FE9A6D225D3065000AAF25 /* FilterNode.swift in Sources */,
 				C18F5AD4226402C7001CD144 /* ImageViewController.swift in Sources */,
+				FCE1ED8D226E59110023C42C /* FirstViewController.swift in Sources */,
 				C128FA662259037B0008BCDF /* ViewController.swift in Sources */,
 				C128FA642259037B0008BCDF /* AppDelegate.swift in Sources */,
 			);
