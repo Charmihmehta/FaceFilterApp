@@ -1,7 +1,7 @@
 //
 //  ViewController.swift
 //  FaceFilterApp
-//
+// ffx
 //  Created by Abita Shiney on 2019-04-06.
 //  Copyright © 2019 Abita Shiney. All rights reserved.
 //
@@ -97,13 +97,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func refreshBtnTapped(_ sender: UITapGestureRecognizer) {
-        let location = (sender).location(in: sceneView)
-        let results = sceneView.hitTest(location, options: nil)
-        if let result = results.first,
-            let node = result.node as? FilterNode {
-            node.next()
-        }
-        
+//        let location = (sender).location(in: sceneView)
+//        let results = sceneView.hitTest(location, options: nil)
+//        if let result = results.first,
+//            let node = result.node as? FilterNode {
+//            node.next()
+//        }
     }
     
     fileprivate func setupTextField() {
