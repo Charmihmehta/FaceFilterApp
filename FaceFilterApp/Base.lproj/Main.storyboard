@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6M-dR-P2o">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6M-dR-P2o">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -123,50 +123,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RS9-5H-nl5">
-                                <rect key="frame" x="103" y="249" width="168" height="68"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RS9-5H-nl5">
+                                <rect key="frame" x="103" y="249" width="169" height="68"/>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="48"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
                                     <action selector="startBtn:" destination="Y6M-dR-P2o" eventType="touchUpInside" id="3t8-40-5eW"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Icon-1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="yEo-W0-t5J">
+                                <rect key="frame" x="123" y="84" width="129" height="112"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je1-zC-giM">
-                                <rect key="frame" x="103" y="356" width="168" height="68"/>
+                                <rect key="frame" x="103" y="338" width="169" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="azk-kR-eDp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="48"/>
                                 <state key="normal" title="Tutorial"/>
                                 <connections>
                                     <action selector="tutorialBtn:" destination="Y6M-dR-P2o" eventType="touchUpInside" id="KSR-dg-Nur"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-snapchat-64.png" translatesAutoresizingMaskIntoConstraints="NO" id="NRX-ab-x1X">
-                                <rect key="frame" x="128" y="145" width="121" height="64"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.86192519430051817" green="0.86192519430051817" blue="0.86192519430051817" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Je1-zC-giM" firstAttribute="leading" secondItem="Vj7-Bz-JXM" secondAttribute="leading" constant="103" id="6PY-5R-hI6"/>
-                            <constraint firstItem="NRX-ab-x1X" firstAttribute="leading" secondItem="Vj7-Bz-JXM" secondAttribute="leading" constant="128" id="9L0-uF-VlS"/>
-                            <constraint firstItem="Je1-zC-giM" firstAttribute="top" secondItem="RS9-5H-nl5" secondAttribute="bottom" constant="39" id="D5E-3H-sxo"/>
-                            <constraint firstItem="Je1-zC-giM" firstAttribute="top" secondItem="RS9-5H-nl5" secondAttribute="bottom" constant="39" id="Ee2-Uk-7zq"/>
+                            <constraint firstItem="yEo-W0-t5J" firstAttribute="leading" secondItem="Vj7-Bz-JXM" secondAttribute="leading" constant="123" id="434-py-aWL"/>
+                            <constraint firstItem="Je1-zC-giM" firstAttribute="trailing" secondItem="RS9-5H-nl5" secondAttribute="trailing" id="6Rm-qs-N4g"/>
+                            <constraint firstItem="Je1-zC-giM" firstAttribute="centerX" secondItem="yEo-W0-t5J" secondAttribute="centerX" id="H0N-ta-T3b"/>
                             <constraint firstItem="Vj7-Bz-JXM" firstAttribute="trailing" secondItem="RS9-5H-nl5" secondAttribute="trailing" constant="104" id="LBK-0b-CU9"/>
-                            <constraint firstItem="Vj7-Bz-JXM" firstAttribute="bottom" secondItem="Je1-zC-giM" secondAttribute="bottom" constant="243" id="MBG-uQ-YOU"/>
                             <constraint firstItem="RS9-5H-nl5" firstAttribute="leading" secondItem="Vj7-Bz-JXM" secondAttribute="leading" constant="103" id="Mgv-jB-keP"/>
-                            <constraint firstItem="NRX-ab-x1X" firstAttribute="top" secondItem="Vj7-Bz-JXM" secondAttribute="top" constant="125" id="ZwU-ue-HHE"/>
-                            <constraint firstItem="Vj7-Bz-JXM" firstAttribute="trailing" secondItem="Je1-zC-giM" secondAttribute="trailing" constant="104" id="ota-2G-2LQ"/>
-                            <constraint firstItem="Vj7-Bz-JXM" firstAttribute="trailing" secondItem="NRX-ab-x1X" secondAttribute="trailing" constant="126" id="v5s-oq-9SV"/>
+                            <constraint firstItem="Je1-zC-giM" firstAttribute="leading" secondItem="RS9-5H-nl5" secondAttribute="leading" id="Rrz-MB-S9D"/>
+                            <constraint firstItem="Je1-zC-giM" firstAttribute="centerX" secondItem="v0W-mQ-5Td" secondAttribute="centerX" id="WVm-9l-HE9"/>
+                            <constraint firstItem="Vj7-Bz-JXM" firstAttribute="trailing" secondItem="yEo-W0-t5J" secondAttribute="trailing" constant="123" id="YyN-RW-TUp"/>
+                            <constraint firstItem="yEo-W0-t5J" firstAttribute="top" secondItem="Vj7-Bz-JXM" secondAttribute="top" constant="64" id="cUg-rU-1sC"/>
+                            <constraint firstItem="Vj7-Bz-JXM" firstAttribute="bottom" secondItem="Je1-zC-giM" secondAttribute="bottom" constant="261" id="h2A-dr-mQF"/>
+                            <constraint firstItem="RS9-5H-nl5" firstAttribute="top" secondItem="yEo-W0-t5J" secondAttribute="bottom" constant="53" id="rWU-Zk-nKB"/>
+                            <constraint firstItem="Je1-zC-giM" firstAttribute="top" secondItem="RS9-5H-nl5" secondAttribute="bottom" constant="21" id="uWY-Gb-NjX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vj7-Bz-JXM"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OsZ-D2-dG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-553" y="134"/>
+            <point key="canvasLocation" x="-554.39999999999998" y="133.5832083958021"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Icon-1024.png" width="768" height="768"/>
         <image name="capture" width="500" height="360"/>
-        <image name="icons8-snapchat-64.png" width="64" height="64"/>
         <image name="reload" width="512" height="512"/>
         <image name="share2" width="50" height="50"/>
     </resources>
