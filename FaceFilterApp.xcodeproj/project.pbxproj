@@ -18,6 +18,7 @@
 		FCE1ED89226E546B0023C42C /* icons8-snapchat-64.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE1ED88226E546B0023C42C /* icons8-snapchat-64.png */; };
 		FCE1ED8D226E59110023C42C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1ED8C226E59110023C42C /* FirstViewController.swift */; };
 		FCE1ED8F226E5F8A0023C42C /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE1ED8E226E5F8A0023C42C /* TutorialViewController.swift */; };
+		FCE1ED96226EAC250023C42C /* Icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = FCE1ED95226EAC250023C42C /* Icon-1024.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FCE1ED88226E546B0023C42C /* icons8-snapchat-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icons8-snapchat-64.png"; sourceTree = "<group>"; };
 		FCE1ED8C226E59110023C42C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		FCE1ED8E226E5F8A0023C42C /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		FCE1ED95226EAC250023C42C /* Icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-1024.png"; path = "../../../Downloads/appiconmaker/Icon-1024.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				C128FA6A2259037D0008BCDF /* Assets.xcassets */,
 				FCE1ED88226E546B0023C42C /* icons8-snapchat-64.png */,
 				C128FA6C2259037D0008BCDF /* LaunchScreen.storyboard */,
+				FCE1ED95226EAC250023C42C /* Icon-1024.png */,
 				C1FE9A6C225D3065000AAF25 /* FilterNode.swift */,
 				C1FE9A6E225D306E000AAF25 /* StringExtension.swift */,
 				C128FA6F2259037D0008BCDF /* Info.plist */,
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C128FA6E2259037D0008BCDF /* LaunchScreen.storyboard in Resources */,
+				FCE1ED96226EAC250023C42C /* Icon-1024.png in Resources */,
 				C128FA6B2259037D0008BCDF /* Assets.xcassets in Resources */,
 				C128FA692259037B0008BCDF /* Main.storyboard in Resources */,
 				FCE1ED89226E546B0023C42C /* icons8-snapchat-64.png in Resources */,
