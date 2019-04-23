@@ -17,13 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="buU-Op-LxL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorial.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NGG-yw-Cth">
+                                <rect key="frame" x="0.0" y="18" width="375" height="649"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xM6-ta-4Ha"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7l-f6-ohr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1431" y="134"/>
+            <point key="canvasLocation" x="-1431.2" y="133.5832083958021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -174,5 +180,6 @@
         <image name="capture" width="500" height="360"/>
         <image name="reload" width="512" height="512"/>
         <image name="share2" width="50" height="50"/>
+        <image name="tutorial.jpg" width="1600" height="1600"/>
     </resources>
 </document>
