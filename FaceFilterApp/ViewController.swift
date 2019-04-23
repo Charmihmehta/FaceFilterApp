@@ -98,7 +98,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func refreshBtnTapped(_ sender: UIButton) {
-//        let location = (sender).location(in: sceneView)
+   //     let location = (sender).location(in: sceneView)
 //        let results = sceneView.hitTest(location, options: nil)
 //        if let result = results.first,
 //            let node = result.node as? FilterNode {
@@ -110,10 +110,17 @@ class ViewController: UIViewController {
         self.loadView()
         self.viewDidLoad()
         self.viewWillAppear(true)
-      //  self.sceneView.reloadInputViews()
+     //  self.textField.handleTap()
+       // tapGesture.addTarget(self, action: #selector(handleTap(_:)))
+       self.sceneView.reloadInputViews()
+        self.view.setNeedsLayout()
            //    self.refreshBtnTapped(sender)
+        
+        let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.handleTap(_:)))
+        singleTap.numberOfTapsRequired = 1
+        self.view.addGestureRecognizer(singleTap)
        
-        showToast(message: "refresh")
+        showToast(message: "Refreshed")
         
     }
     
