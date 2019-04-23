@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         let configuration = ARFaceTrackingConfiguration()
         sceneView.session.run(configuration)
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -96,13 +97,24 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func refreshBtnTapped(_ sender: UITapGestureRecognizer) {
+    @IBAction func refreshBtnTapped(_ sender: UIButton) {
 //        let location = (sender).location(in: sceneView)
 //        let results = sceneView.hitTest(location, options: nil)
 //        if let result = results.first,
 //            let node = result.node as? FilterNode {
 //            node.next()
 //        }
+        //self.viewDidLoad()
+        let configuration = ARFaceTrackingConfiguration()
+        sceneView.session.run(configuration)
+        self.loadView()
+        self.viewDidLoad()
+        self.viewWillAppear(true)
+      //  self.sceneView.reloadInputViews()
+           //    self.refreshBtnTapped(sender)
+       
+        showToast(message: "refresh")
+        
     }
     
     fileprivate func setupTextField() {

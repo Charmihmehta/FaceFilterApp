@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2431B15B159CBD60DB38DCF7 /* Pods_FaceFilterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B61C90C254AADE69213D7C /* Pods_FaceFilterApp.framework */; };
+		C125D0ED226EB677001D1318 /* Icon-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = C125D0EC226EB677001D1318 /* Icon-1024.png */; };
 		C128FA642259037B0008BCDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128FA632259037B0008BCDF /* AppDelegate.swift */; };
 		C128FA662259037B0008BCDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128FA652259037B0008BCDF /* ViewController.swift */; };
 		C128FA692259037B0008BCDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C128FA672259037B0008BCDF /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		0EC9E42EFFC8C94A64DACBFA /* Pods-FaceFilterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FaceFilterApp.release.xcconfig"; path = "Target Support Files/Pods-FaceFilterApp/Pods-FaceFilterApp.release.xcconfig"; sourceTree = "<group>"; };
 		51B61C90C254AADE69213D7C /* Pods_FaceFilterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FaceFilterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C125D0EC226EB677001D1318 /* Icon-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-1024.png"; sourceTree = "<group>"; };
 		C128FA602259037B0008BCDF /* FaceFilterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceFilterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C128FA632259037B0008BCDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C128FA652259037B0008BCDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				FCE1ED8E226E5F8A0023C42C /* TutorialViewController.swift */,
 				C128FA6A2259037D0008BCDF /* Assets.xcassets */,
 				FCE1ED97226EB1920023C42C /* tutorial.jpg */,
+				C125D0EC226EB677001D1318 /* Icon-1024.png */,
 				FCE1ED88226E546B0023C42C /* icons8-snapchat-64.png */,
 				C128FA6C2259037D0008BCDF /* LaunchScreen.storyboard */,
 				C1FE9A6C225D3065000AAF25 /* FilterNode.swift */,
@@ -171,6 +174,7 @@
 				C128FA6B2259037D0008BCDF /* Assets.xcassets in Resources */,
 				C128FA692259037B0008BCDF /* Main.storyboard in Resources */,
 				FCE1ED89226E546B0023C42C /* icons8-snapchat-64.png in Resources */,
+				C125D0ED226EB677001D1318 /* Icon-1024.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
