@@ -55,37 +55,49 @@
                                     <action selector="saveScreenhot" destination="BYZ-38-t0r" eventType="touchUpInside" id="3up-Ch-AHJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lz-GA-pLB">
-                                <rect key="frame" x="296" y="39" width="63" height="39"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypV-ND-OR0">
+                                <rect key="frame" x="16" y="53" width="45" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="ZP1-aT-1Kz"/>
-                                    <constraint firstAttribute="width" constant="63" id="f7F-lF-J9K"/>
+                                    <constraint firstAttribute="width" constant="45" id="gDb-Ap-ROO"/>
+                                    <constraint firstAttribute="height" constant="35" id="rYD-d2-9h3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="waI-vz-iJT"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <state key="normal" title="Share"/>
+                                <state key="normal" image="reload"/>
                                 <connections>
-                                    <action selector="shareImageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gO9-Ks-gfq"/>
+                                    <action selector="refreshBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UOB-G3-sIj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypV-ND-OR0">
-                                <rect key="frame" x="296" y="111" width="63" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Refresh"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4h-JW-tu1">
+                                <rect key="frame" x="314" y="53" width="45" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="err-1O-N6w"/>
+                                    <constraint firstAttribute="width" constant="45" id="gUN-Il-oHi"/>
+                                    <constraint firstAttribute="height" constant="35" id="wN7-m8-6RC"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="wQs-6p-ELA"/>
+                                </constraints>
+                                <state key="normal" image="share2"/>
+                                <connections>
+                                    <action selector="shareImageTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LpV-hN-nwl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Z4h-JW-tu1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="2o3-OA-GlI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0zZ-SD-2g2" secondAttribute="bottom" constant="30" id="6Cw-SC-ABE"/>
-                            <constraint firstItem="4lz-GA-pLB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7Tk-JH-7AH"/>
+                            <constraint firstItem="ypV-ND-OR0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="6Lj-vU-IrD"/>
+                            <constraint firstItem="Z4h-JW-tu1" firstAttribute="leading" secondItem="ypV-ND-OR0" secondAttribute="trailing" constant="253" id="7Iw-uM-6qq"/>
                             <constraint firstItem="EIC-y5-9sx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Dwm-Ux-Xz8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4lz-GA-pLB" secondAttribute="trailing" constant="16" id="IVa-CZ-o8j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z4h-JW-tu1" secondAttribute="trailing" constant="16" id="GiG-a0-EC8"/>
+                            <constraint firstItem="ypV-ND-OR0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="OrH-b0-L8R"/>
                             <constraint firstItem="EIC-y5-9sx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qpf-Gc-9xj"/>
                             <constraint firstItem="EIC-y5-9sx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TFp-3s-Rxs"/>
+                            <constraint firstItem="ypV-ND-OR0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UZO-me-NJv"/>
+                            <constraint firstItem="Z4h-JW-tu1" firstAttribute="leading" secondItem="ypV-ND-OR0" secondAttribute="trailing" constant="253" id="aPv-uL-XhJ"/>
                             <constraint firstItem="0zZ-SD-2g2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="152" id="eOw-lF-MmN"/>
-                            <constraint firstItem="4lz-GA-pLB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="296" id="il5-PW-0y7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z4h-JW-tu1" secondAttribute="trailing" constant="16" id="njN-Xg-otB"/>
+                            <constraint firstItem="ypV-ND-OR0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="qBr-2O-1gm"/>
+                            <constraint firstItem="Z4h-JW-tu1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="tey-Ug-sdJ"/>
                             <constraint firstItem="EIC-y5-9sx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zUL-bk-uq2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -155,5 +167,7 @@
     <resources>
         <image name="capture" width="500" height="360"/>
         <image name="icons8-snapchat-64.png" width="64" height="64"/>
+        <image name="reload" width="512" height="512"/>
+        <image name="share2" width="50" height="50"/>
     </resources>
 </document>

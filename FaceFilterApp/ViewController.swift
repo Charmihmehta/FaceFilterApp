@@ -49,20 +49,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveScreenhot(){
-//        [weak weakSelf = self] in
-//        let picture = SNUtils.screenShot(weakSelf?.screenView)
-//        if let image = picture {
-//            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-//        }
      //   1. Create a Snapshot
-        let snapShot:UIImage = self.sceneView.snapshot()
+       // let snapShot:UIImage = self.sceneView.snapshot()
 
         //2. Save It The Photos Album
-        UIImageWriteToSavedPhotosAlbum(snapShot, self, nil, nil)
+      //  UIImageWriteToSavedPhotosAlbum(snapShot, self, nil, nil)
 
+         let screenShot = snapshot(of: CGRect(x: 0, y: 0, width: 828, height: 1792))
+        UIImageWriteToSavedPhotosAlbum(screenShot!, self, nil, nil)
         showToast(message: "Saved")
-//
-      //   let screenShot = snapshot(of: CGRect(x: 80, y: 80, width: 100, height: 100))
        
     }
   
@@ -79,10 +74,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func shareImageTapped(_ sender: Any) {
-        let snapShot:UIImage = self.sceneView.snapshot()
-
+       // let snapShot:UIImage = self.sceneView.snapshot()
+        let shareScreenShot = snapshot(of: CGRect(x: 0, y: 0, width: 828, height: 1792))
         var imagesToShare = [AnyObject]()
-        imagesToShare.append(snapShot)
+        imagesToShare.append(shareScreenShot!)
 
         let activityViewController = UIActivityViewController(activityItems: imagesToShare , applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
@@ -90,8 +85,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func handleTap(_ sender: UITapGestureRecognizer) {
-        let location = sender.location(in: sceneView)
-        let results = sceneView.hitTest(location, options: nil)
+        let locations = sender.location(in: sceneView)
+        let results = sceneView.hitTest(locations, options: nil)
         if let result = results.first,
             let node = result.node as? FilterNode {
             node.next()
@@ -99,6 +94,16 @@ class ViewController: UIViewController {
         else{
             self.textField.handleTap()
         }
+    }
+    
+    @IBAction func refreshBtnTapped(_ sender: UITapGestureRecognizer) {
+        let location = (sender).location(in: sceneView)
+        let results = sceneView.hitTest(location, options: nil)
+        if let result = results.first,
+            let node = result.node as? FilterNode {
+            node.next()
+        }
+        
     }
     
     fileprivate func setupTextField() {
